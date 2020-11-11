@@ -20,3 +20,7 @@ provider "google" {
 resource "google_compute_network" "vpc_network" {
   name = "terraform-network"
 }
+
+output "my_variable"{
+	value= google_compute_network.vpc_network.routing_mode
+}
