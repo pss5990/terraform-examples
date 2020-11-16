@@ -8,6 +8,6 @@ Setup
 
 Examples
 1. simple-tf-config - 
-2. tf-config-var-func - 
+2. tf-config-var-func - An example showing the usage of variables, count, count.index, count with conditional assignment, locals and string join function.
 
 
