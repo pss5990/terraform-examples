@@ -12,7 +12,5 @@ Setup
 
 Examples
 1. simple-tf-config - Simple tf configuration with provider initialization (using file function for SA key lookup).
-2. tf-config-var-func - An example showing the usage of variables, count, count.index, count with conditional assignment, locals, string join function and data sources.
-3. 
-
-
+2. tf-config-var-func - An example showcasing the usage of variables, count, count.index, count with conditional assignment, locals, string join function and data sources.
+3. tf-config-third - An example showcasing the usage of dynamic blocks, splat expressions and terraform provisioners.
