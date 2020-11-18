@@ -58,7 +58,31 @@ resource "google_compute_instance" "vm-loop" {
     access_config {
     }
   }
+
+  provisioner "local-exec" {
+    command = "echo '..............Local exec provisioner 1.ServerIP address is ->${self.network_interface.0.network_ip}..............'"
+  }
+  provisioner "local-exec" {
+    on_failure = continue
+    command    = "echo '..............Local exec provisioner 2..............'"
+  }
+
+  provisioner "local-exec" {
+    when       = destroy
+    on_failure = continue
+    command    = "echo '..............Destroyed resource..............'"
+  }
+
+// TODO add a remote exec provisioner to install nginx on the newly created machines. ALthough should be done using metadata scripts for compute engine 
+// or using Packer to create cusotm machine images. 
+/*
+  provision "remote-exec" {
+    inline = [
+
+    ]
+  }
 }
+*/
 
 output "new_vm_details" {
   value = google_compute_instance.vm-loop[*].network_interface.0.access_config.0.nat_ip
