@@ -30,4 +30,6 @@ override.tf.json
 
 #Other Files
 .DS_Store
+*.dot
+*.svg
 

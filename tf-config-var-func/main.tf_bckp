@@ -1,0 +1,37 @@
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+    }
+  }
+}
+
+provider "google" {
+  version     = "3.5.0"
+  credentials = file("../../keys/loans-project-editor-sa.json")
+  project     = var.project_id
+  region      = var.project_default_region
+  zone        = var.project_default_zone
+}
+
+resource "google_compute_network" "vpc_network" {
+  name                    = var.vpc_network_name
+  auto_create_subnetworks = false
+}
+
+resource "google_compute_subnetwork" "vpc_subnetwork_us" {
+  name          = var.vpc_subnetwork_us_name
+  region        = var.vpc_subnetwork_us_region
+  ip_cidr_range = var.vpc_subnetwork_us_cidr_range
+  network       = google_compute_network.vpc_network.id
+}
+
+resource "google_compute_subnetwork" "vpc_subnetwork_eu" {
+  name          = var.vpc_subnetwork_eu_name
+  region        = var.vpc_subnetwork_eu_region
+  ip_cidr_range = var.vpc_subnetwork_eu_cidr_range
+  network       = google_compute_network.vpc_network.id
+}
+
+
+

@@ -1,0 +1,45 @@
+variable "vpc_network_name" {
+  type    = string
+  default = "terraform_network"
+}
+
+variable "project_id" {
+  type = string
+}
+
+variable "project_default_region" {
+  type = string
+}
+
+variable "project_default_zone" {
+  type = string
+}
+
+variable "vpc_subnetwork_us_name" {
+  type    = string
+  default = "subnet-1"
+}
+
+variable "vpc_subnetwork_us_region" {
+  type    = string
+  default = "us-central1"
+}
+
+variable "vpc_subnetwork_eu_name" {
+  type    = string
+  default = "subnet-2"
+}
+
+variable "vpc_subnetwork_eu_region" {
+  type    = string
+  default = "europe-west1"
+}
+
+variable "vpc_subnetwork_us_cidr_range" {
+  type    = string
+  default = "10.128.0.0/20"
+}
+variable "vpc_subnetwork_eu_cidr_range" {
+  type    = string
+  default = "10.132.0.0/20"
+}
