@@ -16,5 +16,6 @@ Examples
 3. tf-config-third - An example showcasing the usage of dynamic blocks, splat expressions and terraform provisioners.
 	terraform graph > base.dot
 	terraform graph | dot -Tsvg >  graph.svg
-4.
+4. tf-config-fourth - Example showcasing the usage of modules and workspaces.
+5. 
 
