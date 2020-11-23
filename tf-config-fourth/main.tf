@@ -1,5 +1,6 @@
 module "network" {
   source = "./modules/network"
+  vpc_network_name  = "fourth-example"
 }
 
 data "google_compute_image" "debian_image" {

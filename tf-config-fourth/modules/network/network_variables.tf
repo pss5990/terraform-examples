@@ -1,5 +1,5 @@
 variable "vpc_network_name" {
-  default = "terraform_network"
+  default = "terraform-network"
 }
 
 variable vpc_subnetwork_us {
