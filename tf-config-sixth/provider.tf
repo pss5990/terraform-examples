@@ -1,7 +1,7 @@
 terraform {
-  
-    backend "remote" {}
-  
+
+  backend "remote" {}
+
   required_providers {
     google = {
       source = "hashicorp/google"
