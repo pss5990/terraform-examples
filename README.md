@@ -26,5 +26,6 @@ Examples
 6. tf-config-sixth -> We have seen how we can maintain the terraform state files on a remote location to enable collaboration. In this example we will see how to use an enhanced terraform remote backend using terraform cloud. This will enable us to do remote operations. (Among the other features offered by terraform enterprise like sentinel, cost estimation etc).
 	<br />a. Sign up for terraform cloud account
 	<br />b. Connect terraform with Github as VCS with the credentials.
-	<br />c. 
+	<br />c. terraform.tfvars will not be picked up from the code, terraform cloud expects a file as *.auto.tfvars
+	<br />d.
 
