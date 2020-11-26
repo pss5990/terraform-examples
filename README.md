@@ -23,4 +23,9 @@ Examples
 		terrform workspace select dev -> Switch to dev as the current active workspace
 5. tf-config-fifth -> So far in the above examples we did not provide a backend configuration so terraform used a local backend. This example covers how we can enable a standard remote backend in a GCS bucket. We will use git for terraform configuration but a remote GCS bucket for storing the terraform state files. This will enable collaboration and encryption at rest.
 
-6. tf-config-sixth -> We have seen how we can maintain the terraform state files on a remote location to enable collaboration. In this example we will see how to use an enhanced terraform remote backend using terraform cloud and enterprises solutions. This will enable us to do remote operations. (Among the other features offered by terraform enterprise).
+6. tf-config-sixth -> We have seen how we can maintain the terraform state files on a remote location to enable collaboration. In this example we will see how to use an enhanced terraform remote backend using terraform cloud. This will enable us to do remote operations. (Among the other features offered by terraform enterprise like sentinel, cost estimation etc).
+	a. Sign up for terraform cloud account
+	b. Create OAuth credentials on Github.
+	c. Connect terraform with Github as VCS with the credentials.
+	d.
+
