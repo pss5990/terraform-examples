@@ -14,18 +14,18 @@ Examples
 1. simple-tf-config -> Simple tf configuration with provider initialization (using file function for SA key lookup).
 2. tf-config-var-func -> An example showcasing the usage of variables, count, count.index, count with conditional assignment, locals, string join function and data sources.
 3. tf-config-third -> An example showcasing the usage of dynamic blocks, splat expressions and terraform provisioners.
-		terraform graph > base.dot
-		terraform graph | dot -Tsvg >  graph.svg
+		<br />terraform graph > base.dot
+		<br />terraform graph | dot -Tsvg >  graph.svg
 4. tf-config-fourth -> Example showcasing the usage of modules and workspaces.
-		terraform workspace new dev -> Creates a new dev workspace
-		terraform workspace show -> Shows the current workspace
-		terrform workspace list -> Lists all available workspaces
-		terrform workspace select dev -> Switch to dev as the current active workspace
+		<br />terraform workspace new dev -> Creates a new dev workspace
+		<br />terraform workspace show -> Shows the current workspace
+		<br />terrform workspace list -> Lists all available workspaces
+		<br />terrform workspace select dev -> Switch to dev as the current active workspace
 5. tf-config-fifth -> So far in the above examples we did not provide a backend configuration so terraform used a local backend. This example covers how we can enable a standard remote backend in a GCS bucket. We will use git for terraform configuration but a remote GCS bucket for storing the terraform state files. This will enable collaboration and encryption at rest.
 
 6. tf-config-sixth -> We have seen how we can maintain the terraform state files on a remote location to enable collaboration. In this example we will see how to use an enhanced terraform remote backend using terraform cloud. This will enable us to do remote operations. (Among the other features offered by terraform enterprise like sentinel, cost estimation etc).
-	a. Sign up for terraform cloud account
-	b. Create OAuth credentials on Github.
-	c. Connect terraform with Github as VCS with the credentials.
-	d.
+	<br />a. Sign up for terraform cloud account
+	<br />b. Create OAuth credentials on Github.
+	<br />c. Connect terraform with Github as VCS with the credentials.
+	<br />d.
 
