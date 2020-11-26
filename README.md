@@ -26,6 +26,16 @@ Examples
 6. tf-config-sixth -> We have seen how we can maintain the terraform state files on a remote location to enable collaboration. In this example we will see how to use an enhanced terraform remote backend using terraform cloud. This will enable us to do remote operations. (Among the other features offered by terraform enterprise like sentinel, cost estimation etc).
 	<br />a. Sign up for terraform cloud account
 	<br />b. Connect terraform with Github as VCS with the credentials.
-	<br />c. terraform.tfvars will not be picked up from the code, terraform cloud expects a file as *.auto.tfvars
-	<br />d. Since we cannot upload the service account json key file to a public repository we have to make use of the terraform environment variables GOOGLE_CLOUD_KEYFILE_JSON and copy paste the content of the key file as value to this env. variable
+	<br />c. terraform.tfvars will not be picked up from the code, terraform cloud expects a file as \*.auto.tfvars.
+	<br />d. Since we cannot upload the service account json key file to a public repository we have to make use of the terraform environment variables GOOGLE_CLOUD_KEYFILE_JSON and copy paste the content of the key file as value to this env. variable.
+
+We can also link our local console to the terraform cloud , we wil need to follow these steps - 
+	<br />a. Define the remote backend option in the terraform block.
+	<br />b. Define the workspace, hostname and organization in \*.hcl file (Example backend.hcl in our case).
+	<br />c. Run terraform login to login and connect terraform cloud to local console using token.
+	<br />d. Run terraform init -backend-config=backend.hcl
+	<br />e. Now that we are connected we can run terrafrom plan etc. commands from our termainal. However, we cannot run the terraform apply in this particular case because this workspace has a VCS connection and the workspaces with VCS connection are only allowed to be run for a VCS driven workflow to keep the VCS as the golden source.
+	
+
+
 
