@@ -27,5 +27,5 @@ Examples
 	<br />a. Sign up for terraform cloud account
 	<br />b. Connect terraform with Github as VCS with the credentials.
 	<br />c. terraform.tfvars will not be picked up from the code, terraform cloud expects a file as *.auto.tfvars
-	<br />d.
+	<br />d. Since we cannot upload the service account json key file to a public repository we have to make use of the terraform environment variables GOOGLE_CLOUD_KEYFILE_JSON and copy paste the content of the key file as value to this env. variable
 
